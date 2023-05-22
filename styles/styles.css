@@ -89,7 +89,7 @@ html {
 section {
     min-height: 100vh;
     width: 100%;
-    /* scroll-snap-align: start; */
+    scroll-snap-align: start;
     scroll-snap-stop: always;
     padding: 2em;
 }
