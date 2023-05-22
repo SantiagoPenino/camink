@@ -21,6 +21,7 @@ html {
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
     font-family: 'inter', sans-serif;
+    scroll-padding-top: 90px;
 }
 
 .nav__header {
@@ -31,9 +32,12 @@ html {
     padding: .5em;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 90px;
+    /* display: none; */
 }
 .nav__logo {
-    width: 100px;
+    height: 75px;
 }
 .panel-btn{
     z-index: 9;
@@ -59,7 +63,6 @@ html {
     right: 0;
     z-index: 8;
     width: 100%;
-    height: 100vh;
     background-color: var(--main-color-panel);
     transform: translateY(-100%);
     transition: transform .3s ease;
@@ -80,6 +83,7 @@ html {
     align-items: center;
     font-size: 2rem;
     width: 100%;
+    height: calc(100vh/6);
 }
 .menu__items:active{
     background-color: var(--second-color);
