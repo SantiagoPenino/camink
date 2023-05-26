@@ -78,7 +78,6 @@ section {
     width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    padding: 1em;
     background-image: url(../img/fondo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,14 +99,21 @@ section {
 header{
     display: none;
 }
-.hero__div{
+.home{
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding-bottom: 1em;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    object-fit: cover;
 }
 .hero__logo{
     width: 50%;
+}
+.hero__img{
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
 }
 
 
