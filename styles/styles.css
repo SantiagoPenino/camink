@@ -108,6 +108,7 @@ section {
 .home{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     object-fit: cover;
 }
@@ -129,6 +130,7 @@ section {
     row-gap: 5px;
     text-decoration: underline;
     text-transform: uppercase;
+    padding: 5px;
 }
 .tatuajes{
     grid-area: tatuajes;
