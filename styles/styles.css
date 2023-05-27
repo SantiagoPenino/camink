@@ -109,7 +109,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     object-fit: cover;
 }
 .hero__img{
@@ -120,7 +120,7 @@ section {
 }
 .lista__seccion{
     list-style-type: none;
-    max-width: 70%;
+    max-width: 80%;
     height: 20vh;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -130,8 +130,6 @@ section {
     "remocion remocion"
     "maquillaje maquillaje"
     "joyeria joyeria"; 
-    row-gap: 5px;
-    text-decoration: underline;
     text-transform: uppercase;
 }
 .tatuajes{
@@ -153,5 +151,11 @@ section {
     text-align: center;
     font-size: 1rem;
     font-family: poppins;
-    font-weight: 400;
+    font-weight: 700;
+}
+.items__seccion::before{
+    content: "• ";
+}
+.items__seccion::after{
+    content: " •";
 }
