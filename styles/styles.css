@@ -113,9 +113,9 @@ section {
     object-fit: cover;
 }
 .hero__img{
-    width: 100%;
+    width: 100vw;
     height: 70vh;
-    padding-top: 30px;
+    padding-top: 5vh;
     object-fit: cover;
 }
 .lista__seccion{
