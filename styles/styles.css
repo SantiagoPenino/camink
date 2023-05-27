@@ -130,7 +130,7 @@ section {
     "maquillaje maquillaje"
     "joyeria joyeria"; 
     text-transform: uppercase;
-    padding-top: 10px;
+    padding: 5px;
 }
 .tatuajes{
     grid-area: tatuajes;
