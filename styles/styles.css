@@ -94,6 +94,7 @@ section {
 .nav__header{
     position: fixed;
     top: 0;
+    z-index: 5;
     height: 120px;
     display: flex;
     justify-content: center;
@@ -159,4 +160,25 @@ section {
 }
 .items__seccion::after{
     content: " •";
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+.columna{
+    flex: 33%;
+    max-width: 33%;
+}
+.columna img{
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all .3s ease;
+    max-height: 15%;
+    object-fit: cover;
+    padding: 3px;
+}
+.columna img:active{
+    filter: none;
 }
