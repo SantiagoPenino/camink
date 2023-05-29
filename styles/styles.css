@@ -165,10 +165,11 @@ section {
 .gallery{
     display: flex;
     flex-wrap: wrap;
+    background-color: var(--main-color);
 }
 .columna{
-    flex: 33%;
-    max-width: 33%;
+    flex: calc(100/3);
+    max-width: calc(100/3);
 }
 .columna img{
     vertical-align: middle;
@@ -177,8 +178,74 @@ section {
     transition: all .3s ease;
     max-height: 15%;
     object-fit: cover;
-    padding: 3px;
+    border-radius: 10px;
+    padding: 2px;
 }
-.columna img:active{
+.columna img:hover{
     filter: none;
 }
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition all .7s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.overlay .slideshow{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, .9);
+    color: var(--main-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.slideshow img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.btn__cerrar{
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    font-size: 2.5rem;
+    background-color: var(--second-color);
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.botones{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.back{
+    left: -5px;
+}
+.next{
+    right: -5px;
+}
+
