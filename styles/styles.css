@@ -195,7 +195,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition all .7s ease;
+    transition: all .3s linear;
     opacity: 0;
     visibility: hidden;
 }
