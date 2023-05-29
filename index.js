@@ -1,10 +1,10 @@
-// import burgerMenu from "./burger_menu.js";
+import burgerMenu from "./js/burger_menu.js";
 
-// const d = document;
+const d = document;
 
-// d.addEventListener("DOMContentLoaded",e=>{
-//     burgerMenu(".panel-btn",".menu__panel",".menu__items")
-// });
+d.addEventListener("DOMContentLoaded",e=>{
+    burgerMenu(".panel-btn",".menu__panel",".menu__items")
+});
 
 document.addEventListener('DOMContentLoaded', function (){
     let imagenes = [
@@ -30,37 +30,42 @@ document.addEventListener('DOMContentLoaded', function (){
     const galeriaImagenes = document.querySelectorAll ('.galeria img')
     const imgSlideShow = document.querySelector('.slideshow img')
 
-    contenedor.addEventListener('click',function(event){
-        let atras = contenedor.querySelector('.atras'),
-        adelante = contenedor.querySelector('.adelante'),
+    contenedor.addEventListener('click', function (event){
+        let atras = contenedor.querySelector('.back'),
+        adelante = contenedor.querySelector('.next'),
         img = contenedor.querySelector('img'),
         tgt = event.target
-        if (tgt == atras){
-            if (contador > 0 ){
+        if (tgt == atras) {
+            if (contador > 0) {
                 img.src = imagenes[contador - 1].img
                 contador--
-            }else{
+            } else {
                 img.src = imagenes[imagenes.length - 1].img
                 contador = imagenes.length - 1
             }
-        }else if (tgt == adelante){
-            if (contador < imagenes.length - 1){
+        }else if (tgt == adelante) {
+            if (contador < imagenes.length - 1) {
                 img.src = imagenes[contador + 1].img
                 contador++
-            }else{
+            } else {
                 img.src = imagenes[0].img
                 contador = 0
             }
         }
     })
 
-    Array.from(galeriaImagenes).forEach(img =>{
-        img.addEventListener('click', event =>{
+    Array.from(galeriaImagenes).forEach(img => {
+        img.addEventListener('click', event => {
             const imagenSeleccionada = +event.target.dataset.imgZoom
             imgSlideShow.src = imagenes[imagenSeleccionada].img
             contador = imagenSeleccionada
             overlay.style.opacity = 1
             overlay.style.visibility = 'visible'
         })
+    })
+
+    document.querySelector('.btn__cerrar').addEventListener('click', () => {
+        overlay.style.opacity = 0
+        overlay.style.visibility = 'hidden'
     })
 })
