@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Camink</title>
-    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <link rel="icon" type="image/png" href="/favicon.png" />
 </head>
 
 <body>
@@ -16,10 +16,16 @@
         <div class="slideshow">
             <span class="btn__cerrar">&times;</span>
             <div class="botones back">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-left-bold</title><path fill="#FF0000" d="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>arrow-left-bold</title>
+                    <path fill="#FF0000" d="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z" />
+                </svg>
             </div>
             <div class="botones next">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>arrow-right-bold</title><path fill="#FF0000" d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>arrow-right-bold</title>
+                    <path fill="#FF0000" d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" />
+                </svg>
             </div>
             <img src="" alt="" id="imgSlideshow">
         </div>
@@ -40,22 +46,30 @@
             <a href="#about-us" class="menu__items">Nosotros</a>
             <a href="#galeria" class="menu__items">Galería</a>
             <a href="#contact" class="menu__items">Contacto</a>
-            <a href="./pages/blog.html" class="menu__items">Blog</a>
+            <a href="#blog" class="menu__items">Blog</a>
         </aside>
         <div>
             <section id="home" class="home">
-                    <img class="hero__img" src="./img/hero.jpg" alt="Chica tatuando un brazo">
-                    <ul class="lista__seccion">
-                        <li class="items__seccion tatuajes">Tatuajes</li>
-                        <li class="items__seccion piercings">Piercings</li>
-                        <li class="items__seccion remocion">Remoción de tatuajes láser</li>
-                        <li class="items__seccion maquillaje">Maquillaje permanente</li>
-                        <li class="items__seccion joyeria">Joyería dental</li>
-                    </ul>
+                <img class="hero__img" src="./img/hero.jpg" alt="Chica tatuando un brazo">
+                <p class="hero__text">Hola, soy Cami, descubrí esta pasión en 2015 y a partir de ese momento no paré de
+                    capacitarme con distintos exponentes del rubro.<br>
+
+                    En 2018 comencé a tatuar profesionalmente y sigo a diario las tendencias y nuevas técnicas, no solo
+                    de tatuaje sino también micropigmentación y body piercing, dedicando gran pasión y compromiso para
+                    asegurar que cada cliente encuentre el resultado deseado.<br>
+
+                    Completé el curso de bioseguridad MSP para garantizar que mi enfoque es el de brindar resultados
+                    óptimos.</p>
+                <ul class="lista__seccion">
+                    <li class="items__seccion tatuajes">Tatuajes</li>
+                    <li class="items__seccion piercings">Piercings</li>
+                    <li class="items__seccion remocion">Remoción de tatuajes láser</li>
+                    <li class="items__seccion maquillaje">Maquillaje permanente</li>
+                    <li class="items__seccion joyeria">Joyería dental</li>
+                </ul>
             </section>
             <section id="about-us" class="about-us">
                 <h2 class="titulo__seccion">Nosotros</h2>
-            </section>
             </section>
             <section id="galeria" class="galeria">
                 <div class="columna">
@@ -71,7 +85,8 @@
                     <img src="img/gallery/8.jpg" alt="" data-img-zoom="7">
                     <img src="img/gallery/9.jpg" alt="" data-img-zoom="8">
                     <img src="img/gallery/10.jpg" alt="" data-img-zoom="9">
-                </div><div class="columna">
+                </div>
+                <div class="columna">
                     <img src="img/gallery/11.jpg" alt="" data-img-zoom="10">
                     <img src="img/gallery/12.jpg" alt="" data-img-zoom="11">
                     <img src="img/gallery/13.jpg" alt="" data-img-zoom="12">
@@ -81,12 +96,15 @@
             </section>
             <section id="contact" class="contact">
                 <h2 class="titulo__seccion">Contacto</h2>
-            </section> 
+            </section>
+            <section id="blog" class="blog">
+                <h2 class="titulo__seccion">Blog</h2>
+            </section>
         </div>
     </main>
     <footer>
     </footer>
-    <script src="/index.js" type="module"></script>
+    <script src="./js/index.js" type="module"></script>
 </body>
 
 </html>
