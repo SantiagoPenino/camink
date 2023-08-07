@@ -4,21 +4,24 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    --main-color:#101010;
-    --second-color:#E8E9F3;
-    --main-color-panel:#050505ff;
+    --main-color: #101010;
+    --second-color: #E8E9F3;
+    --main-color-panel: #050505ff;
 }
+
 a {
     text-decoration: none;
     color: var(--second-color);
 }
-html{
+
+html {
     scroll-behavior: smooth;
     scroll-snap-type: both mandatory;
     font-family: 'roboto condensed', serif;
     scroll-padding-top: 90px;
 }
-.panel-btn{
+
+.panel-btn {
     z-index: 9;
     display: flex;
     justify-content: center;
@@ -27,17 +30,20 @@ html{
     top: 10px;
     right: 10px;
 }
-.hamburger-inner, 
+
+.hamburger-inner,
 .hamburger-inner::after,
-.hamburger-inner::before{
+.hamburger-inner::before {
     background-color: var(--second-color);
 }
-.hamburger.is-active .hamburger-inner, 
-.hamburger.is-active .hamburger-inner::after, 
-.hamburger.is-active .hamburger-inner::before{
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::after,
+.hamburger.is-active .hamburger-inner::before {
     background-color: var(--second-color);
 }
-.menu__panel{
+
+.menu__panel {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -53,10 +59,12 @@ html{
     display: flex;
     flex-direction: column;
 }
-.is-active{
+
+.is-active {
     transform: translateY(0);
 }
-.menu__items{
+
+.menu__items {
     font-family: 'Marcellus', sans-serif;
     padding: 1em;
     display: flex;
@@ -69,10 +77,12 @@ html{
     height: calc(100vh/5);
     border: none;
 }
-.menu__items:active{
+
+.menu__items:active {
     background-color: var(--second-color);
     color: var(--main-color);
 }
+
 section {
     height: 100vh;
     width: 100%;
@@ -80,13 +90,15 @@ section {
     scroll-snap-stop: always;
     background-color: var(--second-color);
 }
-.titulo__seccion{
+
+.titulo__seccion {
     text-align: center;
     font-size: 3rem;
     font-weight: 700;
     font-family: 'marcellus';
 }
-.nav__header{
+
+.nav__header {
     position: fixed;
     top: 0;
     z-index: 5;
@@ -97,91 +109,108 @@ section {
     width: 100%;
     clip-path: polygon(0 0, 100% 0%, 100% 69%, 0 80%);
 }
-.nav__logo{
+
+.nav__logo {
     width: 100px;
     height: 80px;
 }
-.home{
+
+.home {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     object-fit: cover;
 }
-.hero__img{
-    width: 200px;
-    height: 200px;
+
+.hero__img {
+    width: 30vw;
+
     object-fit: cover;
     border-radius: 100%;
 }
-.hero__text::before{ 
+
+.hero__text::before {
     content: "\201C";
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
- }
-.hero__text::after{
+}
+
+.hero__text::after {
     content: "\201D";
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.hero__text{
-    padding: .5em 2em ;
-    line-height: 1.5em;
-    font-size: 1rem;
+
+.hero__text {
+    padding: .5em 2em;
+    line-height: 1.3em;
+    font-size: 4vw;
 }
-.lista__seccion{
+
+.lista__seccion {
     list-style: none;
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(4,1fr); 
-    grid-template-areas: 
-    "tatuajes piercings"
-    "remocion remocion"
-    "maquillaje maquillaje"
-    "joyeria joyeria"; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "tatuajes piercings"
+        "remocion remocion"
+        "maquillaje maquillaje"
+        "joyeria joyeria";
     text-transform: uppercase;
-    padding-top: 2em;
+    padding-top: 1em;
 }
-.tatuajes{
+
+.tatuajes {
     grid-area: tatuajes;
 }
-.piercings{
+
+.piercings {
     grid-area: piercings;
 }
-.remocion{
+
+.remocion {
     grid-area: remocion;
 }
-.maquillaje{
+
+.maquillaje {
     grid-area: maquillaje;
 }
-.joyeria{
+
+.joyeria {
     grid-area: joyeria;
 }
-.items__seccion{
+
+.items__seccion {
     padding-top: .5em;
     text-align: center;
-    font-family: 'marcellus',sans-serif;
+    font-family: 'marcellus', sans-serif;
     font-weight: 700;
     font-size: 4vw;
 }
-.items__seccion::before{
+
+.items__seccion::before {
     content: "• ";
 }
-.items__seccion::after{
+
+.items__seccion::after {
     content: " •";
 }
 
-.galeria{
+.galeria {
     display: flex;
     flex-wrap: wrap;
     background-color: var(--main-color);
 }
-.columna{
+
+.columna {
     flex: calc(100/3);
     max-width: calc(100/3);
 }
-.columna img{
+
+.columna img {
     vertical-align: middle;
     width: 100%;
     transition: all .3s ease;
@@ -189,10 +218,12 @@ section {
     object-fit: cover;
     padding: 2px;
 }
-.columna img:hover{
+
+.columna img:hover {
     transform: scale(.95);
 }
-.overlay{
+
+.overlay {
     position: fixed;
     left: 0;
     top: 0;
@@ -207,7 +238,8 @@ section {
     opacity: 0;
     visibility: hidden;
 }
-.overlay .slideshow{
+
+.overlay .slideshow {
     width: 90%;
     height: 90%;
     background-color: rgba(255, 255, 255, .9);
@@ -216,12 +248,14 @@ section {
     display: flex;
     justify-content: center;
 }
-.slideshow img{
+
+.slideshow img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.btn__cerrar{
+
+.btn__cerrar {
     position: absolute;
     top: -15px;
     left: -15px;
@@ -237,7 +271,8 @@ section {
     cursor: pointer;
     z-index: 11;
 }
-.botones{
+
+.botones {
     width: 40px;
     height: 40px;
     border-radius: 50px;
@@ -251,13 +286,15 @@ section {
     transform: translateY(-50%);
     cursor: pointer;
 }
-.botones svg{
+
+.botones svg {
     pointer-events: none;
 }
-.back{
+
+.back {
     left: -5px;
 }
-.next{
+
+.next {
     right: -5px;
 }
-
