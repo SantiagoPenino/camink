@@ -147,58 +147,6 @@ section {
     line-height: 1.3em;
     font-size: 4vw;
 }
-
-.lista__seccion {
-    list-style: none;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-        "tatuajes piercings"
-        "remocion remocion"
-        "maquillaje maquillaje"
-        "joyeria joyeria";
-    text-transform: uppercase;
-    padding-top: 1em;
-}
-
-.tatuajes {
-    grid-area: tatuajes;
-}
-
-.piercings {
-    grid-area: piercings;
-}
-
-.remocion {
-    grid-area: remocion;
-}
-
-.maquillaje {
-    grid-area: maquillaje;
-}
-
-.joyeria {
-    grid-area: joyeria;
-}
-
-.items__seccion {
-    padding-top: .5em;
-    text-align: center;
-    font-family: 'marcellus', sans-serif;
-    font-weight: 700;
-    font-size: 4vw;
-}
-
-.items__seccion::before {
-    content: "• ";
-}
-
-.items__seccion::after {
-    content: " •";
-}
-
 .galeria {
     display: flex;
     flex-wrap: wrap;
@@ -297,4 +245,21 @@ section {
 
 .next {
     right: -5px;
+}
+.swipe{
+    padding-top: 1em;
+    width: 10vw;
+    animation-name: swipe;
+    animation-iteration-count: infinite;
+    animation-duration: .5s;
+    transition: .5 linear;
+    animation-direction: alternate;
+}
+@keyframes swipe {
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: .8;
+    }
 }
