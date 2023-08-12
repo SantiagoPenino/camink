@@ -88,7 +88,10 @@ section {
     width: 100%;
     scroll-snap-align: start;
     scroll-snap-stop: always;
-    background-color: var(--second-color);
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .titulo__seccion {
@@ -144,31 +147,33 @@ section {
 
 .hero__text {
     padding: .5em 2em;
-    line-height: 1.3em;
-    font-size: 4vw;
+    line-height: 1.2em;
+    font-size: 4.3vw;
 }
+
 .galeria {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     background-color: var(--main-color);
 }
 
-.columna {
-    flex: calc(100/3);
-    max-width: calc(100/3);
+.titulo__galeria {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'marcellus';
+    grid-column: span 3;
+    padding: .5em;
 }
 
 .columna img {
     vertical-align: middle;
     width: 100%;
     transition: all .3s ease;
-    max-height: 15%;
+    max-height: 14%;
     object-fit: cover;
     padding: 2px;
-}
-
-.columna img:hover {
-    transform: scale(.95);
+    filter: grayscale(100%);
 }
 
 .overlay {
@@ -207,19 +212,19 @@ section {
     position: absolute;
     top: -15px;
     left: -15px;
-    font-size: 2.5rem;
     background-color: var(--second-color);
+    font-size: 1rem;
     color: var(--main-color);
     width: 30px;
     height: 30px;
-    border-radius: 50px;
+    border-radius: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     z-index: 11;
+    font-weight: 700;
 }
-
 .botones {
     width: 40px;
     height: 40px;
@@ -246,7 +251,8 @@ section {
 .next {
     right: -5px;
 }
-.swipe{
+
+.swipe {
     padding-top: 1em;
     width: 10vw;
     animation-name: swipe;
@@ -255,11 +261,13 @@ section {
     transition: .5 linear;
     animation-direction: alternate;
 }
+
 @keyframes swipe {
-    0%{
+    0% {
         scale: 1;
     }
-    100%{
+
+    100% {
         scale: .8;
     }
 }
